@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+/* If you want your dark theme to be driven by a CSS selector instead of the prefers-color-scheme media query, override the dark variant to use your custom selector: */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Now instead of dark:* utilities being applied based on prefers-color-scheme, they will be applied whenever the dark class is present earlier in the HTML tree: */
+
+/* How you add the dark class to the html element is up to you, but a common approach is to use a bit of JavaScript that updates the class attribute and syncs that preference to somewhere like localStorage. */
